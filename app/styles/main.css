@@ -1,84 +1,3 @@
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-
 body{
     color: white;
     background-color: #0E0E0E;
@@ -124,6 +43,9 @@ body{
     vertical-align: middle;
 
     border: solid white;
+    display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
 }
 .table-cell img{
     max-width:100%;
@@ -131,6 +53,16 @@ body{
 }
 .jumbotron{
     color:black;
+}
+span.align-right {
+position: fixed;
+bottom: -6em;
+right: 0em;
+}
+i.fa.fa-circle.fa-stack-2x{
+  color: black;
+  font-size: 1.9em;
+line-height: 1.06em;
 }
 
 
@@ -148,10 +80,10 @@ html,body {margin:0; padding:10px; -webkit-backface-visibility:hidden;}
   padding: 25px;
   width:auto;
   max-width: 400px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
-/* 
+/*
 
 ====== Zoom-out effect ======
 
@@ -242,10 +174,10 @@ a,
   }
 .links {
   ul {
-    
+
   }
   li {
-   margin-bottom: 5px; 
+   margin-bottom: 5px;
   }
 }
 h4 {
@@ -259,7 +191,7 @@ h4 {
     border-bottom: 1px solid #CCC;
   }
   p {
-   max-width: 650px; 
+   max-width: 650px;
   }
 }
 .mfp-with-zoom .mfp-container,
@@ -267,9 +199,9 @@ h4 {
   opacity: 0;
   -webkit-backface-visibility: hidden;
   /* ideally, transition speed should match zoom duration */
-  -webkit-transition: all 0.3s ease-out; 
-  -moz-transition: all 0.3s ease-out; 
-  -o-transition: all 0.3s ease-out; 
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -280,7 +212,7 @@ h4 {
     opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
@@ -289,4 +221,7 @@ h4 {
     text-align: center;
     font-size: 3em;
 
+}
+h4{
+  color: white
 }

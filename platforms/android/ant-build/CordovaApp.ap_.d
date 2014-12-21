@@ -32,6 +32,7 @@
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/cordova.js \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/404.html \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/styles \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/plugins \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/images \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/favicon.ico \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/views/main.html \
@@ -42,10 +43,12 @@
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/fonts/glyphicons-halflings-regular.eot \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/res/screen \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/res/icon \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/scripts/vendor.1f56cb29.js \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/scripts/oldieshim.76f279db.js \
-/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/scripts/scripts.a53fbbe3.js \
-/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/scripts/vendor.b22b1fd4.js \
-/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/styles/main.e0afbcbc.css \
-/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/styles/vendor.cabc70f2.css \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/scripts/scripts.9b5236e0.js \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/styles/vendor.ad91ac09.css \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/styles/main.4eadeec6.css \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/images/yeoman.d2754b85.png \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/images/camera.e0418840.png \
+/home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/assets/www/images/camera.39f8e444.gif \
 /home/crousem/Desktop/pg_bingo/app/myapp/platforms/android/ant-build/AndroidManifest.xml \

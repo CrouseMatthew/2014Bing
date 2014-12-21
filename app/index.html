@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">    
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+    <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -23,42 +24,31 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-     <div class="container">
-      <div class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
-            ng-click="menuCollapsed = ! menuCollapsed">
-            <span class="sr-only">Toggle navigation</span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
           </button>
-          <div class="navbar-brand">
-            NYE BUS
-            <small>
-              V.2014
-            </small>
-          </div>
+          <a class="navbar-brand" href="#/">SelfieBingo <small>v2014</small></a>
         </div>
-        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+        <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li ui-sref-active="active">
-              <a href ui-sref="home">
-                <i class="fa fa-bus"></i>
-                Home
-              </a>
-            </li>
-            <li ui-sref-active="active">
-              <a href ui-sref="about">
-                <i class="fa fa-camera-retro"></i>
-                Bingo Board
-              </a>
-            </li>
+            <li class="active"><a href="/#/"><i class="fa fa-bus"></i> &nbsp; Home</a></li>
+            <li><a href="/#about"><i class="fa fa-camera-retro"></i> &nbsp; Bingo-Board</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
       </div>
-    </div>
-    
+    </nav>
+
+     <div class="container">
+
 
     <div class="container"><div ng-view=""></div></div>
 
@@ -66,13 +56,6 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-inner">
-          <ul class="social">
-            <li><a target="_blank" href="http://gplus.to/joshdmiller"><i class="fa fa-google-plus-sign"></i></a></li>
-            <li><a target="_blank" href="http://twitter.com/joshdmiller"><i class="fa fa-twitter-sign"></i></a></li>
-            <li><a target="_blank" href="http://linkedin.com/in/joshdmiller"><i class="fa fa-linkedin-sign"></i></a></li>
-            <li><a target="_blank" href="http://github.com/ngbp/ngbp"><i class="fa fa-github-sign"></i></a></li>
-          </ul>
-
 
           <p>
             (c) 2014 <a href="#">Matthew Crouse</a>.
@@ -89,6 +72,7 @@
         </div>
       </div>
     </footer>
+  </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -113,13 +97,63 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/ionic/release/js/ionic.js"></script>
     <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="bower_components/angular-bootstrap-collapse-nav/build/angular-bootstrap-collapse-nav.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
+  <script>
+$(document).ready(function() {
+// Inline popups
+$('#inline-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Image popups
+$('#image-popups').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+      // just a hack that adds mfp-anim class to markup 
+       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  closeOnContentClick: true,
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Hinge effect popup
+$('a.hinge').magnificPopup({
+  mainClass: 'mfp-with-fade',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeClose: function() {
+        this.content.addClass('hinge');
+    }, 
+    close: function() {
+        this.content.removeClass('hinge'); 
+    }
+  },
+  midClick: true
+});
+});
+
+</script>
 </body>
 </html>
